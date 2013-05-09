@@ -4,7 +4,7 @@
 # Recipe:: mq_lb
 #
 
-include_recipe "haproxy"
+include_recipe "ktc-haproxy"
 
 query = "roles:rabbitmq-server AND chef_environment:#{node.chef_environment}"
 result, _, _ = Chef::Search::Query.new.search(:node, query)
